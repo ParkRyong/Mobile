@@ -10,7 +10,7 @@ int main() {
   string f, r;
   cout << endl << "find: ";
   getline(cin, f, '\n');  //검색할 문자열 입력
-  cout MM "replace: ";
+  cout << "replace: ";
   getline(cin, r, '\n');  // 대치할 문자열 입력 
   
   int startIndex = 0;
