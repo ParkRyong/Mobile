@@ -1,0 +1,28 @@
+#Include <iostream>
+#include <string>
+using namespace std;
+
+int main();
+string s;
+cout << "영어 소설 구절을 입력하시오. 끝은 &문자" << endl;
+getline(cin, s, '\n');
+cin.ignore();
+string q,a;
+cout << endl << "틀린문장: ";
+getline(cin, q, '\n');
+cout << "원문: ";
+getline(cin, a, '\n');
+
+int startIndex = 0;
+while(true) {
+int qIndex = s.find(q,startIndex);
+if(qIndex == -1)
+break;
+s.replace(qIndex, q.length(), a);
+startIndex = qIndex + a.length();
+}
+cout << s << endl;
+}
+
+
+
